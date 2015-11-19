@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="bootstrap.css">
+	<meta charset="UTF-8">
+	<title>Starcraft Profile for Moon Glaive</title>
+</head>
+<body>
+	<div class="container">
+		<h1> Starcraft Profile </h1>
+		<hr class="featurette-divider"></hr>
+	</div>
+	<div class="container lead">
+		<p> Enter your starcraft information below. Information provided below will be used to match you with practice partners, teammates, etc.</p>
+	</div>
+	<div class ="container">
+		<h3>Account Information</h3>
+		<br>
+		<table>
+			<thead>
+				<tr>
+					<th>Battle.net ID</th>
+					<th>Battle.net ID #</th>
+					<th>Notes</th>
+				</tr>
+				<tr>
+						<td><input class="form-control username-input" placeholder = "e.g. Koala"></td>
+						<td><input class="form-control idnumber-input" placeholder = "e.g. 313"></td>
+						<td><input class="form-control notes-input" placeholder = "Other information"></td>
+						<div> </div>
+						<td> <button class="btn btn-primary add-account">Add account</button> </td>
+				</tr>
+			</thead>
+			<tbody class="accounts-list"></tbody>
+		</table>
+		<br>
+		<button onclick="confirmsave()" class="btn btn-primary">Save All Information</button>
+		<script>function confirmsave() {
+			alert("Your information has been updated");	
+			location.href = "http://www.moonglaive.com"; // this is to be updated later with the actual profile site
+		}
+		</script>
+		<script type = "text/template" class="accounts-list-template">
+		<td><span class="username"><%= username %></span></td>
+		<td><span class="idnumber"><%= idnumber %></span></td>
+		<td><span class="notes"><%= notes %></span></td>
+		<td>
+			<button class = "btn btn-warning edit-account">Edit</button>
+			<button class = "btn btn-danger delete-account">Delete</button>
+			<button class = "btn btn-success update-account" style = "display:none">Update</button>
+			<button class = "btn btn-danger cancel" style = "display:none">Cancel</button>
+		</td>
+		</div>
+		</script>	
+	<!--
+	<div class="container">
+		<h1>Starcraft Profile</h1>
+		<hr class = "featurette-divider"></hr>
+			<table class = "table">
+				<thead>
+					<tr>
+						<th>Moon Glaive Username</th>
+						<th>Alias (Separate multiple using a comma)</th>
+						<th>Battle.net ID</th>
+						<th>Battle.net Profile URL</th>
+						<th>Additional Notes</th>
+						<th>Formats of Interest</th>
+					</tr>
+					<tr>
+						<td><input class="form-control username-input"></td>
+						<td><input class="form-control alias-input"></td>
+						<td><input class="form-control bnetid-input"></td>
+						<td><input class="form-control additional-input"></td>
+						<td><input class="form-control formats-input"></td>
+				</thead>
+			</table>
+	</div>
+-->
+	<script src="jquery.js"></script>
+	<script src="underscore.js"></script>
+	<script src="backbone.js"></script>
+	<script src="script.js"></script>
+</body>
+<footer>
+</footer>
+</html>
